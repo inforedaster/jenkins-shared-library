@@ -10,10 +10,7 @@ def call(Map parameters = [:]) {
 
     def mvn = tool(DevOpsConf.MAVEN_INSTALLATION)
 
-    /**
-     * Stage to build Maven project
-     */
-    stage("building Micro-Service Project.....") {
+
             try {
 
                 sh "${mvn}/bin/mvn clean install "
@@ -21,5 +18,4 @@ def call(Map parameters = [:]) {
                 currentBuild.result = 'FAILED'
                 throw err
             }
-    }
 }

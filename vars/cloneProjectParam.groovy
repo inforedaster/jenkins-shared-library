@@ -7,10 +7,8 @@ def call(Map parameters = [:]) {
 
     def gitUrl = parameters.get('gitUrl')
 
-    stage ("Clone project") {
         //$branch pram exist in the job param
 
             git branch: "$branch", url: "$gitUrl"
 
-    }
 }

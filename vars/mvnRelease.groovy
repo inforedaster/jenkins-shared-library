@@ -15,10 +15,6 @@ def call(Map parameters = [:]) {
     def nextVersion
     def versionToIncrement = "${increment}"
 
-    /**
-     * Stage to build Maven project
-     */
-    stage("Release Maven project.....") {
 
             /**
              * Maven verify to check the dependencies
@@ -66,5 +62,5 @@ def call(Map parameters = [:]) {
             //Push the nextVersion in master
             sh "git add . && git commit -m 'Make next development iteration ${nextVersion}'"
             sh "git push origin ${msbranch}"
-    }
+
 }

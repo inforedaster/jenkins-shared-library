@@ -11,7 +11,6 @@ def call(Map parameters = [:]) {
     def utilities = new Utilities()
     def projectname = utilities.getBuildInfo().artifactId
 
-    stage ("Clone project") {
         def userRemoteConfigs = scm.userRemoteConfigs
         if(env.gitlabSourceRepoURL != null) {
             userRemoteConfigs = [[
@@ -26,5 +25,5 @@ def call(Map parameters = [:]) {
 
         env.JOB_LASTCOMMIT = sh(script: 'git rev-parse refs/remotes/origin/'+ "$branch" +'^{commit}', returnStdout: true).toString().trim()
         println 'lastcommit:'+env.JOB_LASTCOMMIT+':'
-    }
+
 }
