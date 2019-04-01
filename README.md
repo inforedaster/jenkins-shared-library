@@ -82,3 +82,7 @@ pipeline {
 
  * mvnBuildClassic : build a simple maven project
  * mvnRelease ; a simple way to release maven project
+
+ ### contribution
+
+The project is open to all ELS members to update or improve this template
