@@ -1,9 +1,8 @@
 import com.els.itops.services.DevOpsConf
 
-
 /**
  * Classic Maven build
- * @param parameters
+ * @param no parameter
  * @return
  */
 def call(Map parameters = [:]) {

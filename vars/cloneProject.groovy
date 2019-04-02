@@ -8,6 +8,7 @@ import com.els.itops.services.Utilities
 def call(Map parameters = [:]) {
 
     //${branch} is a job parameter
+
     def utilities = new Utilities()
     def projectname = utilities.getBuildInfo().artifactId
 
