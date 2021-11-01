@@ -6,7 +6,7 @@
 <mirrors>
     <mirror>
         <id>Public Repositories</id>
-        <url>http://localhost:8081/nexus/content/groups/public/</url>
+        <url>http://localhost:8081/repository/maven-public/</url>
         <mirrorOf>*</mirrorOf>
     </mirror>
 </mirrors>
