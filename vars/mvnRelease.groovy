@@ -1,5 +1,5 @@
-import com.els.itops.services.Utilities
-import com.els.itops.services.DevOpsConf
+import com.pwc.dfy.services.Utilities
+import com.pwc.dfy.services.DevOpsConf
 
 /**
  * Release Maven project

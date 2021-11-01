@@ -1,7 +1,11 @@
 #!groovy
-package com.els.itops.services
+package com.pwc.dfy.services
 
 
+/**
+ * Getting a pom.xml version
+ * @return pom version
+ */
 def getPOMVersion() {
     def matcher = readFile('pom.xml') =~ '<revision>(.+)-\\$\\{BuildNumber\\}</revision>'
     matcher ? matcher[0][1] : null

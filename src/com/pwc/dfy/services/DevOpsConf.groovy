@@ -1,5 +1,5 @@
 #!groovy
-package com.els.itops.services
+package com.pwc.dfy.services
 
 class DevOpsConf implements Serializable {
 
@@ -16,7 +16,7 @@ class DevOpsConf implements Serializable {
 
 
     /**
-     * itops Project
+     * Digital Factory Projects
      */
 
 

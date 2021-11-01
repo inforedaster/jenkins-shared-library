@@ -1,5 +1,5 @@
 #!groovy
-package com.els.itops.services
+package com.pwc.dfy.services
 
 class GlobalConf implements Serializable{
 

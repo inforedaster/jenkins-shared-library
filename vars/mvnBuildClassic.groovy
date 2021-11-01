@@ -1,4 +1,4 @@
-import com.els.itops.services.DevOpsConf
+import com.pwc.dfy.services.DevOpsConf
 
 /**
  * Classic Maven build
