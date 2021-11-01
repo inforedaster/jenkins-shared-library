@@ -35,7 +35,7 @@ def call(Map parameters = [:]) {
           -Dversion="1.0.${BUILD_NUMBER}" \
           -DgeneratePom=false \
           -DrepositoryId="maven-snapshots" \
-          -Durl="http://172.17.0.3:8081/content/repositories/maven-snapshots/" \
+          -Durl="http://172.17.0.3:8081/repository/maven-snapshots/" \
           -Dfile="myfile.zip" -s ${pathManifest}
       """
 
