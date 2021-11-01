@@ -18,7 +18,7 @@ def call(Map parameters = [:]) {
 //                writeFile file: pathSecurityManifest, text: contentSecurityFile
 
                 //settings.xml
-                def filePath = DevOpsConf.DFY_SETTINGS_FILE
+                def filePath = DevOpsConf.ITOPS_SETTINGS_FILE
                 def contentfile = libraryResource filePath
                 def pathManifest = './home/jenkins/.m2/' + 'settings.xml'
                 writeFile file: pathManifest, text: contentfile
