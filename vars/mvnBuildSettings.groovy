@@ -8,6 +8,8 @@ import com.pwc.dfy.services.DevOpsConf
 def call(Map parameters = [:]) {
 
     def param = parameters.get('param')
+    def mvn = tool(DevOpsConf.MAVEN_INSTALLATION)
+
 
     try {
 
@@ -23,7 +25,8 @@ def call(Map parameters = [:]) {
                 def pathManifest = './home/jenkins/.m2/' + 'settings.xml'
                 writeFile file: pathManifest, text: contentfile
 
-                sh "mvn ${param} -s ${pathManifest}"
+               // sh "${mvn}/bin/mvn clean ${param} -s ${pathManifest}"
+                sh "${mvn}/bin/mvn clean install -s ${pathManifest}"
 
 
     } catch (err) {
