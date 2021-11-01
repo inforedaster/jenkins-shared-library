@@ -8,7 +8,7 @@ import com.pwc.dfy.services.DevOpsConf
 def call(Map parameters = [:]) {
 
     //def gitUrl = parameters.get('gitUrl')
-    def git = tool("git")
+    def git = tool("Default")
 
         //$branch pram is a job param
 
