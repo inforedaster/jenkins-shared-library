@@ -12,6 +12,7 @@ class DevOpsConf implements Serializable {
     public final static String NEXUS_THIRD_PARTY = 'https://nexus.lefebvre-sarrut.eu/repository/thirdparty/'
     public final static String ITOPS_SETTINGS_FILE = 'com/els/pipeline/itops/settings.xml'
     public final static String MAVEN_INSTALLATION = 'maven-3.6.0'
+    public final static String SONARQUBE_SERVER = 'sonarqube'
 
 
 
