@@ -11,6 +11,6 @@ def call(Map parameters = [:]) {
     def mvn = tool(DevOpsConf.MAVEN_INSTALLATION)
     withSonarQubeEnv("${DevOpsConf.SONARQUBE_SERVER}") {
         echo 'pom'
-        sh "${mvn}/bin/mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar"
+        sh "${mvn}/bin/mvn sonar:sonar"
     }
 }
