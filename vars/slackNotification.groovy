@@ -1,4 +1,4 @@
-import com.pwc.dfy.services.DevOpsConf
+import com.pwc.dfy.services.*
 
 /**
  * clone git project with git url in parameters
