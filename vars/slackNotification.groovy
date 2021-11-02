@@ -8,7 +8,6 @@ import com.pwc.dfy.services.*
 def call(Map parameters = [:]) {
 
     def utilities = new Utilities()
-    def token = DevOpsConf.IMPULSE_SLACK_TOKEN
     def message = parameters.get('message')
     def slackChannel = parameters.get('slackChannel')
 
