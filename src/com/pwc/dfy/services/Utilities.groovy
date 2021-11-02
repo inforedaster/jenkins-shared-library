@@ -179,3 +179,18 @@ def incrementPatch(String version){
     def nextVersion = major+'.'+minor+'.'+ (patch.toInteger() + 1)
     return nextVersion
 }
+
+
+/**
+ * Slack notification
+ * @param Deployment_slack_channel
+ * @param token
+ * @return
+ */
+def slackMSNotification(String Deployment_slack_channel, String message) {
+
+    wrap([$class: 'BuildUser']) {
+
+        slackSend channel: "#$Deployment_slack_channel", color: 'good', message: "$message par $BUILD_USER"
+    }
+}
