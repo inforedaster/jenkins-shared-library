@@ -189,8 +189,7 @@ def incrementPatch(String version){
  */
 def slackMSNotification(String Deployment_slack_channel, String message) {
 
-    wrap([$class: 'BuildUser']) {
 
         slackSend channel: "#$Deployment_slack_channel", color: 'good', message: "$message"
-    }
+
 }
