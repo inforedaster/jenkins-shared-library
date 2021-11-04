@@ -6,14 +6,14 @@
 <mirrors>
     <mirror>
         <id>Public Repositories</id>
-        <url>http://172.17.0.3:8081/repository/maven-central/</url>
+        <url>http://172.17.0.4:8081/repository/maven-central/</url>
         <mirrorOf>*</mirrorOf>
     </mirror>
 </mirrors>
 
 <servers>
     <server>
-        <id>maven-snapshots</id>
+        <id>snapshots</id>
         <username>admin</username>
         <password>admin</password>
     </server>
