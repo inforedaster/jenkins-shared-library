@@ -20,17 +20,8 @@ def call(Map parameters = [:]) {
                 def pathManifest = './home/jenkins/.m2/' + 'settings.xml'
                 writeFile file: pathManifest, text: contentfile
 
-
-        sh """
-           ${mvn}/bin/mvn deploy:deploy-file \
-          -DgroupId="com.file.nexus" \
-          -DartifactId="jenkins" \
-          -Dversion="1.0.${BUILD_NUMBER}" \
-          -DgeneratePom=false \
-          -DrepositoryId="maven-snapshots" \
-          -Durl="http://172.17.0.3:8081/repository/maven-snapshots/" \
-          -Dfile="myfile.zip" -s ${pathManifest}
-      """
+               // sh "${mvn}/bin/mvn clean ${param} -s ${pathManifest}"
+                sh "${mvn}/bin/mvn clean install -s ${pathManifest}"
 
 
     } catch (err) {

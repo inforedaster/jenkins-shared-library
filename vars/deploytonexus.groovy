@@ -10,8 +10,14 @@ def call(Map parameters = [:]) {
     def utilities = new Utilities()
     def mvn = tool(DevOpsConf.MAVEN_INSTALLATION)
     def nexus = parameters.get('nexus')
+    def filePath = DevOpsConf.ITOPS_SETTINGS_FILE
+    def contentfile = libraryResource filePath
+    def pathManifest = './home/jenkins/.m2/' + 'settings.xml'
+    writeFile file: pathManifest, text: contentfile
 
-    sh "${mvn}/bin/mvn clean deploy  -Dnexus=${nexus}"
+
+
+    sh "${mvn}/bin/mvn clean deploy -s ${pathManifest} -Dnexus=${nexus}"
     /*sh """
            ${mvn}/bin/mvn deploy:deploy-file \
           -DgroupId="com.file.nexus" \
