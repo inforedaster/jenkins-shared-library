@@ -193,3 +193,9 @@ def slackMSNotification(String Deployment_slack_channel, String message) {
         slackSend channel: "#$Deployment_slack_channel", color: 'good', message: "$message"
 
 }
+
+def calling(String nom, String prenom) {
+
+        bat  "hello mon nom est : $nom et mon premnom est $prenom"
+
+}
