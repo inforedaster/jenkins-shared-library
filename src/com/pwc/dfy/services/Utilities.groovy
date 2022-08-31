@@ -196,6 +196,6 @@ def slackMSNotification(String Deployment_slack_channel, String message) {
 
 def calling(String nom, String prenom) {
 
-    bat  'hello mon nom est : ' + "${nom}" + ' et mon prenom est ' + "${prenom}"
+    bat  ' mon nom est : ' + "${nom}" + ' et mon prenom est ' + "${prenom}"
 
 }
