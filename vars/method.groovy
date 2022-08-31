@@ -8,7 +8,5 @@ import com.pwc.dfy.services.*
 def call(Map parameters = [:]) {
 
     def utilities = new Utilities()
-    
     utilities.calling("${nom}", "${prenom})
-
 }
