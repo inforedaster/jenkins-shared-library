@@ -10,7 +10,7 @@ def call(Map parameters = [:]) {
 
             try {
 
-                sh "echo ça Marche !!!!!!! "
+                 bat 'echo coucou'
             } catch (err) {
                 currentBuild.result = 'FAILED'
                 throw err
