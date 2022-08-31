@@ -9,6 +9,6 @@ def call(Map parameters = [:]) {
 
     def utilities = new Utilities()
     
-    utilities.calling()
+    utilities.calling("${nom}", "${prenom})
 
 }
