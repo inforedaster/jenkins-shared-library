@@ -7,6 +7,7 @@ import com.pwc.dfy.services.*
  */
 def call(Map parameters = [:]) {
 
+    def nom = parameters.get('nom')
     def utilities = new Utilities()
     utilities.calling("${nom}", "${prenom}")
 }
