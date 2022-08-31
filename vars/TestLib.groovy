@@ -4,12 +4,8 @@
  * @return
  */
 def call(Map parameters = [:]) {
-
    
-
-
             try {
-
                  bat 'echo coucou'
             } catch (err) {
                 currentBuild.result = 'FAILED'
